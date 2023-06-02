@@ -68,7 +68,7 @@ if ($myId >= 1) {
                     if ($width1 != null && $height1 != null) {
                         $image1Type = getPicType($_FILES['image0']['type']);
                         $image1Name = $time . "." . $image1Type;
-                        processPic("$domain/store", $image1Name, $tmpFile, 800,
+                        processPic("store", $image1Name, $tmpFile, 800,
                                 150);
                         $p1stmt = $db->prepare(
                                 "UPDATE animals4sale SET image = ? WHERE id = ?");
@@ -158,7 +158,7 @@ if ($myId >= 1) {
                     if ($width1 != null && $height1 != null) {
                         $image1Type = getPicType($_FILES[$fullM]['type']);
                         $image1Name = ($time + $m) . "." . $image1Type;
-                        processPic("$domain/store", $image1Name, $tmpFile, 800,
+                        processPic("store", $image1Name, $tmpFile, 800,
                                 150);
                         $p1stmt = $db->prepare(
                                 "UPDATE animals4sale SET image = ? WHERE id = ?");

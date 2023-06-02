@@ -28,7 +28,7 @@ if ($myId >= 1) {
             if ($width1 != null && $height1 != null) {
                 $image1Type = getPicType($_FILES['imageTop']['type']);
                 $image1Name = $time . "." . $image1Type;
-                processPic("$domain/pages", $image1Name, $tmpFile, 800, 150);
+                processPic("pages", $image1Name, $tmpFile, 800, 150);
                 $p1stmt = $db->prepare(
                         "UPDATE company SET homeImg1 = ? WHERE id = ?");
                 $p1stmt->execute(array(
@@ -44,7 +44,7 @@ if ($myId >= 1) {
             if ($width2 != null && $height2 != null) {
                 $image2Type = getPicType($_FILES['imageBottom']['type']);
                 $image2Name = $time . "." . $image2Type;
-                processPic("$domain/pages", $image2Name, $tmpFile, 800, 150);
+                processPic("pages", $image2Name, $tmpFile, 800, 150);
                 $p2stmt = $db->prepare(
                         "UPDATE company SET homeImg2 = ? WHERE id = ?");
                 $p2stmt->execute(array(
@@ -62,7 +62,7 @@ if ($myId >= 1) {
             if ($width1 != null && $height1 != null) {
                 $image1Type = getPicType($_FILES['imageAbout']['type']);
                 $image1Name = $time . "." . $image1Type;
-                processPic("$domain/pages", $image1Name, $tmpFile, 800, 150);
+                processPic("pages", $image1Name, $tmpFile, 800, 150);
                 $p1stmt = $db->prepare(
                         "UPDATE company SET aboutPic = ? WHERE id = ?");
                 $p1stmt->execute(array(
@@ -87,7 +87,7 @@ if ($myId >= 1) {
             if ($width1 != null && $height1 != null) {
                 $image1Type = getPicType($_FILES['imageContact']['type']);
                 $image1Name = $time . "." . $image1Type;
-                processPic("$domain/pages", $image1Name, $tmpFile, 800, 150);
+                processPic("pages", $image1Name, $tmpFile, 800, 150);
                 $p1stmt = $db->prepare(
                         "UPDATE company SET contactPic = ? WHERE id = ?");
                 $p1stmt->execute(array(

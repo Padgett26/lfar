@@ -43,7 +43,7 @@ if ($myId >= 1) {
             if ($width1 != null && $height1 != null) {
                 $image1Type = getPicType($_FILES['pic']['type']);
                 $image1Name = $time . "." . $image1Type;
-                processPic("$domain/photos", $image1Name, $tmpFile, 800, 150);
+                processPic("photos", $image1Name, $tmpFile, 800, 150);
                 $p1stmt = $db->prepare(
                         "UPDATE photos SET photo = ? WHERE id = ?");
                 $p1stmt->execute(array(
